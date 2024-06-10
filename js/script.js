@@ -50,7 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnCloseModal.addEventListener('click', closeModal);
 
-    modalOverlay.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (event) => {
+        if (event.target === modalOverlay) {
+            closeModal();
+        }
+    });
 
 
 
